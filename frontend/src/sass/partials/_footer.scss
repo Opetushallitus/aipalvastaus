@@ -23,18 +23,35 @@ footer.disclaimer-footer{
       font-size: .85em;
     }
     padding: 20px 10px 10px 10px;
-    height: $footer-height;
+    min-height: $footer-height;
+    height: auto;
   }
 }
 
 footer.copyright-footer {
   $footer-height: 120px;
-  height: $footer-height; background-color: $darkest-gray;
+  height: $footer-height;
+  background-color: $darkest-gray;
   .app-wrapper {
     padding-top: 50px;
     height: $footer-height;
     background: url("../img/oph_logo_footer.svg") right 10px center no-repeat;
     .no-svg & {background-image: url("../img/oph_logo_footer.png")}
+  }
+}
+
+@media screen and (max-width: 620px) {
+  footer.copyright-footer {
+    $footer-height: 120px;
+    height: $footer-height;
+    background-color: $darkest-gray;
+    .app-wrapper {
+      padding-top: 80px;
+      text-align: center;
+      height: $footer-height;
+      background: url("../img/oph_logo_footer.svg") center 10px no-repeat;
+      .no-svg & {background-image: url("../img/oph_logo_footer.png")}
+    }
   }
 }
 
